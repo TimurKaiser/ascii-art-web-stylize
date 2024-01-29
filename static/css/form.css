@@ -1,0 +1,155 @@
+jhtml, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(255, 255, 255) 3%, rgb(145, 145, 145) 38%, rgb(88, 88, 88) 68%, rgb(202, 202, 202) 98%);
+    animation: gradient 60s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+}
+
+#main {
+    text-align: right;
+}
+
+#toggle-btn {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.enter {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#p1 {
+    text-align: center;
+    color: #333;
+}
+
+#p2 {
+    width: 60%; /* Ajustez la largeur selon vos besoins */
+    margin: auto; /* Ceci centre le div horizontalement */
+    text-align: center; /* Cela centre le contenu à l'intérieur du div */
+    font-size: 18px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+select, textarea, button {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.dark-mode body {
+    background: linear-gradient(315deg, rgb(0, 0, 0) 3%, rgb(74, 72, 72) 38%, rgb(118, 116, 116) 68%, rgb(69, 66, 66) 98%);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Ajout de styles pour centrer le formulaire */
+.enter {
+    margin: 20px auto; /* Auto pour centrer horizontalement */
+    max-width: 600px; /* Ajustez la largeur maximale du formulaire selon vos besoins */
+}
+
+/* Ajustement de la taille du champ de texte */
+#inputText {
+    width: 100%; /* Remplacez 100% par une valeur fixe si vous ne souhaitez pas que l'utilisateur ajuste la taille */
+    box-sizing: border-box;
+}
+
+/* Ajustement de la taille des boutons */
+button {
+    padding: 12px 20px; /* Ajustez la taille du rembourrage en conséquence */
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Styles pour empêcher le redimensionnement du champ de texte */
+textarea {
+    resize: none;
+}
+
+/* Ajout de styles pour le conteneur du résultat */
+.result-container {
+    margin: 20px auto; /* Marge pour centrer le résultat horizontalement */
+    max-width: 600px; /* Ajustez la largeur maximale du conteneur selon vos besoins */
+    background-color: #fff; /* Couleur de fond du conteneur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px; /* Espacement intérieur */
+}
+
+h2 {
+    margin-top: 20px; /* Ajoutez une marge en haut pour séparer du formulaire */
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: monospace;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; /* Ajoutez une marge au-dessus du résultat */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/form.css">
+    <title>Ascii Art Website</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">ASCII ART WEBSITE</h1>
+    </header>
+    <div class="enter">
+        <p id="p2"> This website is a test for converting an inputted sentence to ASCII Art with three different given banners. </p>
+        <form action="/" method="post">
+            <label for="inputText">Enter text:</label>
+            <textarea id="inputText" name="inputText" rows="4" cols="50"></textarea>
+    
+            <br>
+    
+            <label>Choose font:</label>
+            <select id="fontSelect" name="fontSelect">
+                <option value="shadow">Shadow</option>
+                <option value="standard">Standard</option>
+                <option value="thinkertoy">Thinkertoy</option>
+                <option value="test404">test404</option>
+            </select>
+    
+            <br>
+    
+            <button type="submit">Convert</button>
+        </form>
+    </div>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toglle("dark-mode")
+        }
+    </script>
+
+    <div class="result-container">
+        <h2>Converted Ascii Art:</h2>
+        <pre>{{.ConvertedText}}</pre>
+    </div>
+    
+</body>
+</html>

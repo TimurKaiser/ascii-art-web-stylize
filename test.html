@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/form.css">
+    <title>Ascii Art Website</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">ASCII ART WEBSITE</h1>
+        <main id="main">
+            <button id="toggle-btn" onclick="darkMode()">☼/☾</button>
+        </main>
+        <div class="title">
+            <p id="p1">This website is a test for converting an inputted sentence to ASCII Art with three different given banners.</p>
+        </div>
+    </header>
+    <div class="enter">
+        <div id="p2">
+            <!-- Insérer le formulaire ici -->
+            <form action="/" method="post">
+                <label for="inputText">Enter text:</label>
+                <textarea id="inputText" name="inputText" rows="4" cols="50"></textarea>
+        
+                <br>
+        
+                <label>Choose font:</label>
+                <select id="fontSelect" name="fontSelect">
+                    <option value="shadow">Shadow</option>
+                    <option value="standard">Standard</option>
+                    <option value="thinkertoy">Thinkertoy</option>
+                    <option value="test404">test404</option>
+                </select>
+        
+                <br>
+        
+                <button type="submit">Convert</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <h2>Converted Ascii Art:</h2>
+    <!-- Utiliser {{.ConvertedText}} pour afficher le texte converti -->
+    <pre>{{.ConvertedText}}</pre>
+</body>
+</html>
